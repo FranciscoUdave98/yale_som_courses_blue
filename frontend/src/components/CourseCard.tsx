@@ -1,5 +1,15 @@
 import { useState } from 'react'
 import type { Course } from '../api'
+import HandsomeDan from './HandsomeDan'
+
+// Realistic bulldog coat tones — each course gets a stable one based on its number.
+const FUR_PALETTE = ['#b5742e', '#8b5a2b', '#d99a5b', '#5c4033', '#e8c39e', '#9a9a9a', '#c2703f']
+
+function furColorFor(seed: string): string {
+  let hash = 0
+  for (let i = 0; i < seed.length; i++) hash = (hash * 31 + seed.charCodeAt(i)) >>> 0
+  return FUR_PALETTE[hash % FUR_PALETTE.length]
+}
 
 const CATEGORY_HUES: Record<string, string> = {
   Core: 'core',
@@ -32,9 +42,12 @@ export default function CourseCard({ course }: { course: Course }) {
   const syllabus = course.Syllabus || course['Old Syllabus']
   const faculty = course['Faculty 1']
   const description = course['Course Description'].trim()
+  const dan = furColorFor(`${course['Course Number']}${course.Section}`)
 
   return (
     <article className={`card card--${hue}`}>
+      <HandsomeDan furColor={dan} size={76} className="card__dan" />
+
       <header className="card__top">
         <span className="card__number">
           {course['Course Number']}

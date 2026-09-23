@@ -119,5 +119,38 @@
     ],
     "stopped": "final answer (finish_reason=stop)",
     "reply": "Here are the main Yale SOM courses focused on AI or machine learning:\n\n- **MGT 409 — AI Foundations for Managers**  \n  Tauhid Zaman · Core · 2 units  \n  Multiple Fall 1 sections, meeting Monday/Wednesday or Tuesday/Thursday. Focuses on building and deploying AI agents for enterprise use.\n\n- **MGT 695 — Introduction to AI Applications**  \n  Xiuye Chen · Elective · 4 units  \n  Fall · Tuesday/Thursday, 11:35 AM–12:50 PM  \n  Covers AI technology, machine-learning fundamentals, deep learning, and practical AI skills.\n\n- **MGT 809 — Analytics in the Age of AI**  \n  Zhen Lian · Elective · 2 units  \n  Fall 2 · Multiple sections  \n  Focuses on structuring business decisions, resource allocation, operations, and strategy in AI-driven organizations.\n\n- **MGT 533 — Strategy, Innovation and Artificial Intelligence**  \n  Eva Chalioti · EMBA · 2 units  \n  Fall · Meeting details are not listed.\n\n- **MGT 808 — Financial Computing**  \n  Eren Kurshan · Finance elective · 2 units  \n  Fall 2 · Thursday, 2:35–5:35 PM  \n  Covers AI applications in financial services, including fraud detection, algorithmic trading, financial advising, and risk management.\n\n- **MGT 927 — Financial Econometrics and Machine Learning**  \n  Bryan Kelly · Economics elective / MMS Asset Management · 2 units  \n  Fall 2 and Spring 1 · Friday, 8:30–11:30 AM  \n  A full 4-unit course spanning both sessions.\n\nThere is also a PhD version, **MGMT 7206 — Financial Econometrics and Machine Learning**, worth 0.5 units."
+  },
+  {
+    "time": "2026-09-23T12:42:26+00:00",
+    "user_message": "hi",
+    "model": "gpt-5.6-luna",
+    "thoughts": [],
+    "tool_calls": [],
+    "stopped": "final answer (finish_reason=stop)",
+    "reply": "Hi! I can help you explore Yale SOM courses, instructors, schedules, and course descriptions. What would you like to find?"
+  },
+  {
+    "time": "2026-09-23T12:51:16+00:00",
+    "user_message": "I want a class about making better decisions under uncertainty",
+    "model": "gpt-6-astra",
+    "thoughts": [],
+    "tool_calls": [
+      {
+        "tool": "search_courses",
+        "args": {
+          "query": "Yale SOM class about making better decisions under uncertainty, decision-making with probability, risk, ambiguity, forecasting, and judgment"
+        },
+        "result": "{\"total_matches\":12,\"returned\":12,\"note\":\"\",\"courses\":[{\"number\":\"MGMT 7306\",\"section\":\"01\",\"title\":\"Current Topics in Judgement and Decision-Making\",\"faculty\":\"Zauberman, Gal\",\"category\":\"PhD\",\"type\":\"PHD\",\"session\":\"fall\",\"day_time\":\"Th 2:00 PM-6:00 PM\",\"room\":\"EVANS 4230\",\"units\":\"1.0\",\"syllabus…"
+      },
+      {
+        "tool": "search_courses",
+        "args": {
+          "query": "Yale SOM MBA or elective course for practical managerial decision-making under uncertainty, risk, forecasting, judgment, and decision analysis; exclude PhD courses"
+        },
+        "result": "{\"total_matches\":14,\"returned\":14,\"note\":\"\",\"courses\":[{\"number\":\"MGT 810\",\"section\":\"E1\",\"title\":\"Risk, Intelligence and Decision-Making\",\"faculty\":\"Cort, Todd\",\"category\":\"EMBA\",\"type\":\"EMBA,Elective\",\"session\":\"fall\",\"day_time\":\"TBA\",\"room\":\"TBA\",\"units\":\"2.0\",\"syllabus\":\"https://yale.instructur…"
+      }
+    ],
+    "stopped": "final answer (finish_reason=stop)",
+    "reply": "The strongest match is:\n\n- **MGT 809 — Analytics in the Age of AI**  \n  Taught by **Zhen Lian**. It focuses on structuring messy business decisions, evaluating tradeoffs, allocating resources, and **stress-testing strategy under uncertainty**.  \n  - **Fall 2**\n  - **2 units**\n  - Two sections:\n    - Section 01: Tuesday/Thursday, 1:00–2:20 PM, Evans 4430\n    - Section G1: Monday/Wednesday, 2:35–3:55 PM, Evans 4430\n\nOther possibilities:\n\n- **MGT 810 — Risk, Intelligence and Decision-Making** — an EMBA elective taught by **Todd Cort**; schedule and room are listed as TBA.\n- **MGT 403 — Probability Modeling & Statistics** — a core course covering probability, simulation, confidence intervals, hypothesis testing, and regression; useful for quantitative decision-making under uncertainty. It has several sections with different meeting times.\n\nIf you want the most directly practical course, I’d start with **MGT 809**."
   }
 ]

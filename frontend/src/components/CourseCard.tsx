@@ -2,8 +2,8 @@ import { useState } from 'react'
 import type { Course } from '../api'
 import HandsomeDan from './HandsomeDan'
 
-// Realistic bulldog coat tones — each course gets a stable one based on its number.
-const FUR_PALETTE = ['#b5742e', '#8b5a2b', '#d99a5b', '#5c4033', '#e8c39e', '#9a9a9a', '#c2703f']
+// Just for fun: a ROYGBIV rainbow of coat colors, each course gets a stable one based on its number.
+const FUR_PALETTE = ['#ef4444', '#f97316', '#eab308', '#22c55e', '#3b82f6', '#4f46e5', '#a855f7']
 
 function furColorFor(seed: string): string {
   let hash = 0
@@ -46,17 +46,21 @@ export default function CourseCard({ course }: { course: Course }) {
 
   return (
     <article className={`card card--${hue}`}>
-      <HandsomeDan furColor={dan} size={76} className="card__dan" />
+      <div className="card__headrow">
+        <div className="card__headtext">
+          <header className="card__top">
+            <span className="card__number">
+              {course['Course Number']}
+              {course.Section ? <span className="card__section"> · §{course.Section}</span> : null}
+            </span>
+            <span className="chip">{category}</span>
+          </header>
 
-      <header className="card__top">
-        <span className="card__number">
-          {course['Course Number']}
-          {course.Section ? <span className="card__section"> · §{course.Section}</span> : null}
-        </span>
-        <span className="chip">{category}</span>
-      </header>
+          <h3 className="card__title">{course['Course Title']}</h3>
+        </div>
 
-      <h3 className="card__title">{course['Course Title']}</h3>
+        <HandsomeDan furColor={dan} size={72} className="card__dan" />
+      </div>
 
       {faculty ? (
         <div className="card__faculty">

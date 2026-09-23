@@ -209,7 +209,7 @@ textarea {
 /* ---------- Cards ---------- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 24px;
   align-items: start;
   transition: opacity 0.15s;
@@ -225,7 +225,7 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 22px 20px 16px;
+  padding: 26px 20px 16px;
   border: 1px solid var(--glass-border);
   border-top: 1px solid var(--glass-border);
   border-radius: var(--radius);
@@ -266,10 +266,23 @@ textarea {
 .card--marketing { --accent: #d1337a; }
 .card--accounting { --accent: #3a7d9c; }
 
+.card__headrow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card__headtext {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
+}
+
 .card__dan {
-  position: absolute;
-  top: -16px;
-  right: 16px;
+  flex-shrink: 0;
   filter: drop-shadow(0 6px 10px rgba(0, 36, 72, 0.25));
 }
 
@@ -278,7 +291,6 @@ textarea {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding-right: 64px;
 }
 
 .card__number {

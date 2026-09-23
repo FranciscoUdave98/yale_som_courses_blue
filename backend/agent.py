@@ -45,7 +45,7 @@ MODEL_NAME = "gpt-6-astra"
 PORTKEY_BASE_URL = os.getenv("PORTKEY_BASE_URL", "https://api.portkey.ai/v1").rstrip("/")
 PROMPT_PATH = HERE / "prompts" / "prompt.md"
 AUDIT_PATH = ROOT / "output" / "audit_trail.json"
-MAX_MODEL_REQUESTS = 8
+MAX_MODEL_REQUESTS = 20  # web_search often needs several rounds (open_page, search, refine)
 RESULT_PREVIEW_CHARS = 300
 
 _audit_lock = threading.Lock()

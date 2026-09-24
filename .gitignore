@@ -4,3 +4,5 @@ __pycache__/
 node_modules/
 *.zip
 *.db
+# Ship the course database with the repo so the agent works right after cloning
+!data/yale_som.db
